@@ -1,0 +1,33 @@
+.small_card {
+  max-width: 517px;
+  height: 181px;
+
+  padding: 32px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.small_card__header {
+  font-size: 14px;
+  color: var(--darkGrey);
+  span {
+    color: var(--purple);
+  }
+}
+
+.small_card__title {
+  max-width: 369px;
+  margin-top: 8px;
+}
+
+.active {
+  background-color: var(--lightYellow);
+}
+
+@media (max-width: 900px) {
+  .small_card {
+    min-width: 320px;
+    height: 200px;
+  }
+}

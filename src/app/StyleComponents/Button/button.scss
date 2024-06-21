@@ -1,0 +1,17 @@
+.button_style {
+  background-color: var(--yellow);
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 16px 48px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: 0.2s;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: #edc14a;
+  }
+}

@@ -1,0 +1,12 @@
+.social__wrapper {
+  li {
+    cursor: pointer;
+
+    &:hover {
+      svg g path {
+        transition: 0.2s;
+        fill: white;
+      }
+    }
+  }
+}

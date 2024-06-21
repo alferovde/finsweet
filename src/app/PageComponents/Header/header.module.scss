@@ -1,0 +1,40 @@
+.header {
+  background-color: var(--black);
+}
+
+.header__container {
+  color: white;
+  height: 80px;
+  display: flex;
+  align-items: center;
+
+  nav {
+    display: flex;
+    gap: 24px;
+    font-size: 16px;
+    margin-left: auto;
+  }
+
+  button {
+    background-color: #fff;
+    margin-left: 32px;
+  }
+}
+
+.header__mobile_menu {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .header__container {
+    nav,
+    button {
+      display: none;
+    }
+  }
+
+  .header__mobile_menu {
+    display: flex;
+    margin-left: auto;
+  }
+}
