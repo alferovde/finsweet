@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Button from "./StyleComponents/Button/Button";
 import Hero from "./PageComponents/Hero/Hero";
 import FeaturedPost from "./PageComponents/FeaturedPost/FeaturedPost";
+import AboutUs from "./PageComponents/AboutUs/AboutUs";
 
 async function getData() {
   const res = await fetch("http://127.0.0.1:8000/api");
@@ -27,6 +28,7 @@ export default async function Home() {
         autor={result.hero_post_author}
       />
       <FeaturedPost data={result.all_post} autors={result.autors} />
+      <AboutUs />
     </main>
   );
 }

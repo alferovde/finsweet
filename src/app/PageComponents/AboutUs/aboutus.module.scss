@@ -1,0 +1,88 @@
+.aboutus__wrapper {
+  background-color: var(--lavander);
+  min-height: 523px;
+  margin-top: 128px;
+  position: relative;
+}
+
+.aboutus__header {
+  height: 23px;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  background: linear-gradient(
+    to right,
+    #fff 0%,
+    #fff 15%,
+    var(--yellow) 15%,
+    var(--yellow) 75%,
+    var(--purple) 25%
+  );
+}
+
+.aboutus__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 96px 80px;
+
+  p {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    font-weight: 700;
+  }
+  .aboutus_description {
+    text-transform: none;
+    line-height: 28px;
+    font-size: 16px;
+    margin-top: 18px;
+    font-weight: 400;
+  }
+}
+
+.aboutus__about {
+  width: 45%;
+
+  a {
+    color: var(--purple);
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 16px;
+  }
+}
+.aboutus__mission {
+  width: 45%;
+}
+
+@media (max-width: 700px) {
+  .aboutus__container {
+    padding: 56px 40px;
+  }
+  .aboutus__about {
+    h2 {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .aboutus__container {
+    padding: 56px 40px;
+    flex-direction: column;
+  }
+
+  .aboutus__about {
+    width: 100%;
+  }
+  .aboutus__mission {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .aboutus_description {
+    text-align: justify;
+  }
+}

@@ -1,5 +1,5 @@
 .featured_post__wrapper {
-  min-height: 1000px;
+  min-height: 700px;
   display: flex;
   background-color: #fff;
   justify-content: space-between;
@@ -46,7 +46,7 @@
   }
   .featured_post__allpost__render {
     display: flex;
-    min-height: 400px;
+    min-height: max-content;
     overflow: scroll;
   }
 }

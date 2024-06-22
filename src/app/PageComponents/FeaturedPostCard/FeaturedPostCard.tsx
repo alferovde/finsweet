@@ -16,7 +16,12 @@ const FeaturedPostCard = ({
   return (
     <div className={`${style.featured_post_card__wrapper}`}>
       <div className={style.featured_post_card__img}>
-        <Image src={path + img} fill alt={title} />
+        <Image
+          src={path + img}
+          fill
+          alt={title}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
       </div>
 
       <div className={style.featured_post_card__header}>
