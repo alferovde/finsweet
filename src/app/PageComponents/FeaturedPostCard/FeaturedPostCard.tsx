@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import style from "./featuredpostcard.module.scss";
 import Button from "@/app/StyleComponents/Button/Button";
+import DateComponent from "../DateComponent/DateComponent";
 const FeaturedPostCard = ({
   title,
   img,
@@ -11,7 +12,6 @@ const FeaturedPostCard = ({
   description1,
 }: FeaturedPostCardType) => {
   const path = process.env.storage_path;
-  const data_psot = new Date(date).toDateString();
 
   return (
     <div className={`${style.featured_post_card__wrapper}`}>
@@ -28,7 +28,9 @@ const FeaturedPostCard = ({
         <p>
           By <span>{autors[0].name}</span>
         </p>
-        <p>{data_psot}</p>
+        <p>
+          <DateComponent date={date} />
+        </p>
       </div>
       <h3> {title}</h3>
       <div className={style.featured_post_card__description}>

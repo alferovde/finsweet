@@ -1,0 +1,21 @@
+.authors__wrapper {
+  h2 {
+    margin-bottom: 48px;
+    text-align: center;
+  }
+  margin-bottom: 95px;
+}
+
+.authors__list {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+@media (max-width: 1258px) {
+  .authors__list {
+    justify-content: space-around;
+  }
+}

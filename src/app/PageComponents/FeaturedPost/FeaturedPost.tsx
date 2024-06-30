@@ -43,6 +43,10 @@ const FeaturedPost = ({ data, autors }: FeaturedPost) => {
     );
   };
 
+  function foo() {}
+
+  console.log(foo.prototype);
+
   return (
     <section className={`${style.featured_post__wrapper} container`}>
       <div className={style.featured_post__post}>

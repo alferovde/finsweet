@@ -1,0 +1,19 @@
+.full_card {
+  max-width: 296px;
+  height: 228px;
+  border: 1px solid var(--mediumGrey);
+  padding: 32px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 0.2s;
+  p {
+    color: var(--mediumGrey);
+    line-height: 28px;
+    margin-top: 4px;
+  }
+
+  &:hover {
+    background-color: var(--yellow);
+    border: 1px solid transparent;
+  }
+}

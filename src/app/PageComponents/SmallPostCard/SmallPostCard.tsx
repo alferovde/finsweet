@@ -1,6 +1,7 @@
 import React from "react";
 import { SmallPostCardType } from "@/app/Store/interfaces";
 import style from "./smallpostcard.module.scss";
+import DateComponent from "../DateComponent/DateComponent";
 const SmallPostCard = ({
   id,
   title,
@@ -10,7 +11,7 @@ const SmallPostCard = ({
   onClick,
   currentPost,
 }: SmallPostCardType) => {
-  const data_psot = new Date(date).toDateString();
+  // const data_psot = new Date(date).toDateString();
   return (
     <div
       className={
@@ -22,7 +23,7 @@ const SmallPostCard = ({
     >
       <div className={style.small_card__header}>
         <p>
-          By <span>{autors[0].name}</span> {data_psot}
+          By <span>{autors[0].name}</span> <DateComponent date={date} />
         </p>
       </div>
       <div className={style.small_card__title}>

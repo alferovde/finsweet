@@ -4,6 +4,10 @@ import Button from "./StyleComponents/Button/Button";
 import Hero from "./PageComponents/Hero/Hero";
 import FeaturedPost from "./PageComponents/FeaturedPost/FeaturedPost";
 import AboutUs from "./PageComponents/AboutUs/AboutUs";
+import ChooseCategory from "./PageComponents/ChooseCategory/ChooseCategory";
+import SpecialPost from "./PageComponents/SpecialPost/SpecialPost";
+import AuthorsList from "./PageComponents/AuthorsList/AuthorsList";
+import LogoComponents from "./PageComponents/LogoComponents/LogoComponents";
 
 async function getData() {
   const res = await fetch("http://127.0.0.1:8000/api");
@@ -29,6 +33,10 @@ export default async function Home() {
       />
       <FeaturedPost data={result.all_post} autors={result.autors} />
       <AboutUs />
+      <ChooseCategory data={result.categories} />
+      <SpecialPost />
+      <AuthorsList data={result.autors} />
+      <LogoComponents />
     </main>
   );
 }
