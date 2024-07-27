@@ -8,6 +8,8 @@ import ChooseCategory from "./PageComponents/ChooseCategory/ChooseCategory";
 import SpecialPost from "./PageComponents/SpecialPost/SpecialPost";
 import AuthorsList from "./PageComponents/AuthorsList/AuthorsList";
 import LogoComponents from "./PageComponents/LogoComponents/LogoComponents";
+import Testimonials from "./PageComponents/Testimonials/Testimonials";
+import JoinOurTeam from "./PageComponents/JoinOurTeam/JoinOurTeam";
 
 async function getData() {
   const res = await fetch("http://127.0.0.1:8000/api");
@@ -22,8 +24,6 @@ async function getData() {
 export default async function Home() {
   const result = await getData();
 
-  // console.log(result);
-
   return (
     <main className={styles.main}>
       <Hero
@@ -33,10 +33,12 @@ export default async function Home() {
       />
       <FeaturedPost data={result.all_post} autors={result.autors} />
       <AboutUs />
-      <ChooseCategory data={result.categories} />
+      <ChooseCategory data={result.categories} title={"Choose A Catagory"} />
       <SpecialPost />
       <AuthorsList data={result.autors} />
       <LogoComponents />
+      <Testimonials />
+      <JoinOurTeam />
     </main>
   );
 }

@@ -1,21 +1,21 @@
 import { SetStateAction, Dispatch } from "react";
 
 export type PostType = {
-  id: number;
+  id?: number;
   title: string;
   img: string;
-  bigImage: string;
-  categorie_id: number;
-  author_id: number;
-
-  date: string;
+  bigImage?: string;
+  categorie_id?: number;
+  author_id?: number;
+  cat_title?: string;
+  date?: string;
   title1: string;
   description1: string;
-  title2: string;
-  description2: string;
-  title3: string;
-  description3: string;
-  list: string;
+  title2?: string;
+  description2?: string;
+  title3?: string;
+  description3?: string;
+  list?: string;
 };
 
 export type CategoriesType = {

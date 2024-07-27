@@ -2,6 +2,7 @@ import React from "react";
 import style from "./hero.module.scss";
 import { PostType } from "@/app/Store/interfaces";
 import Button from "@/app/StyleComponents/Button/Button";
+import DateComponent from "../DateComponent/DateComponent";
 
 type HeroComponent = {
   data: PostType;
@@ -10,7 +11,9 @@ type HeroComponent = {
 };
 
 const Hero = ({ data, categories, autor }: HeroComponent) => {
-  const data_psot = new Date(data.date).toDateString();
+  // const data_psot = new Date(data.date).toDateString();
+
+  // console.log(data);
 
   return (
     <section className={style.hero__wrapper}>
@@ -26,7 +29,9 @@ const Hero = ({ data, categories, autor }: HeroComponent) => {
           <p className={style.hero__author_name}>
             By <span>{autor}</span>
           </p>
-          <p className={style.hero__author_date}>{data_psot}</p>
+          <p className={style.hero__author_date}>
+            <DateComponent date={data.date} />
+          </p>
         </div>
         <div className={style.hero__description}>
           {data.description1.slice(0, 220) + " ..."}

@@ -36,5 +36,29 @@
   .header__mobile_menu {
     display: flex;
     margin-left: auto;
+
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 35px;
+      height: 2px;
+      position: absolute;
+      top: 10px;
+      left: 0;
+      background-color: #fff;
+    }
+    &::after {
+      content: "";
+      width: 35px;
+      height: 2px;
+      position: absolute;
+      top: -10px;
+      left: 0;
+      background-color: #fff;
+    }
   }
 }

@@ -1,0 +1,27 @@
+.slick-slider {
+  position: relative;
+  height: 100%;
+
+  .slick-prev {
+    width: 50px;
+    height: 50px;
+    background-color: #3824ee;
+    position: absolute;
+    top: 270px;
+    left: 410px;
+    z-index: 555;
+  }
+
+  .slick-next {
+    width: 50px;
+    height: 50px;
+    background-color: #7bd811;
+    border-radius: 50%;
+    // background-image: url("../../../../public/images/Logo.svg");
+    position: absolute;
+    left: 500px;
+    top: 270px;
+    border: none;
+    font-size: 0px;
+  }
+}
